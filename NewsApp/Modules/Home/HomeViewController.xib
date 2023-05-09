@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CoolStoryregular.ttf">
+            <string>CoolStoryregular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="NewsApp" customModuleProvider="target">
             <connections>
@@ -17,14 +22,65 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oq0-Bu-uyp">
+                    <rect key="frame" x="0.0" y="80.5" width="414" height="815.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvN-fO-zal" userLabel="Message View">
+                    <rect key="frame" x="82" y="348" width="250" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="fXH-eg-2CS">
+                            <rect key="frame" x="43" y="8" width="164" height="137"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="164" id="3Q1-4t-rjK"/>
+                                <constraint firstAttribute="height" constant="137" id="Rco-qo-gAH"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting News..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puX-Ge-DT2">
+                            <rect key="frame" x="16" y="152.5" width="218" height="26"/>
+                            <fontDescription key="fontDescription" name="CoolStoryregular" family="CoolStoryregular" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="3yo-br-ZEr"/>
+                        <constraint firstItem="puX-Ge-DT2" firstAttribute="leading" secondItem="JvN-fO-zal" secondAttribute="leading" constant="16" id="7Q5-Ic-cY5"/>
+                        <constraint firstItem="fXH-eg-2CS" firstAttribute="top" secondItem="JvN-fO-zal" secondAttribute="top" constant="8" id="HGk-o0-oDA"/>
+                        <constraint firstAttribute="trailing" secondItem="puX-Ge-DT2" secondAttribute="trailing" constant="16" id="eQP-Nj-DqH"/>
+                        <constraint firstItem="puX-Ge-DT2" firstAttribute="top" secondItem="fXH-eg-2CS" secondAttribute="bottom" constant="7.5" id="fsY-iV-lMM"/>
+                        <constraint firstItem="fXH-eg-2CS" firstAttribute="centerX" secondItem="JvN-fO-zal" secondAttribute="centerX" id="gXH-gl-UV8"/>
+                        <constraint firstAttribute="height" constant="200" id="vY8-6e-cjj"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZT-cC-Fao">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
+                    <color key="backgroundColor" red="0.70441645379999995" green="0.60869866610000001" blue="0.52852231260000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemGrayColor"/>
-            <point key="canvasLocation" x="139" y="84"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Oq0-Bu-uyp" secondAttribute="trailing" id="1KL-04-1d7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CZT-cC-Fao" secondAttribute="trailing" id="Anj-gY-UJ7"/>
+                <constraint firstItem="CZT-cC-Fao" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JzM-MH-ZA3"/>
+                <constraint firstItem="CZT-cC-Fao" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.09" id="UZg-0L-Jf4"/>
+                <constraint firstItem="JvN-fO-zal" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="V9R-Cp-fjR"/>
+                <constraint firstItem="Oq0-Bu-uyp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eTN-sh-gMR"/>
+                <constraint firstItem="Oq0-Bu-uyp" firstAttribute="top" secondItem="CZT-cC-Fao" secondAttribute="bottom" id="f70-Rw-MG2"/>
+                <constraint firstItem="JvN-fO-zal" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="rBS-OM-xTd"/>
+                <constraint firstItem="CZT-cC-Fao" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="v7W-ME-rRV"/>
+                <constraint firstAttribute="bottom" secondItem="Oq0-Bu-uyp" secondAttribute="bottom" id="zqm-MV-xL7"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="83.705357142857139"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="Loading" width="164" height="137"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
