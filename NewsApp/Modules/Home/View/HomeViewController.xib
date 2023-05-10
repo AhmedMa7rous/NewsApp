@@ -15,7 +15,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="NewsApp" customModuleProvider="target">
             <connections>
+                <outlet property="imgMeessage" destination="fXH-eg-2CS" id="BwF-5a-0xy"/>
+                <outlet property="lblMessage" destination="puX-Ge-DT2" id="YwB-aW-XGm"/>
+                <outlet property="newsTableView" destination="Oq0-Bu-uyp" id="egS-uZ-OSW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMessage" destination="JvN-fO-zal" id="UBh-JF-E8F"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
