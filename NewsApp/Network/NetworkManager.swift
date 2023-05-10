@@ -9,9 +9,9 @@ import Foundation
 import Moya
 
 public enum NetworkManager {
+    static private let apiKey = "bf137dde865147ff97b49b0852f0a971"
     
     case everything
-    
 }
 
 extension NetworkManager: TargetType {
@@ -36,7 +36,7 @@ extension NetworkManager: TargetType {
     public var task: Task {
         switch self {
         case .everything:
-            return .requestParameters(parameters: ["q": "apple", "apiKey": "bf137dde865147ff97b49b0852f0a971"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["q": "apple", "apiKey": NetworkManager.apiKey], encoding: URLEncoding.default)
         }
     }
     
