@@ -28,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oq0-Bu-uyp">
-                    <rect key="frame" x="0.0" y="80.5" width="414" height="815.5"/>
+                    <rect key="frame" x="0.0" y="90.5" width="414" height="805.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvN-fO-zal" userLabel="Message View">
@@ -73,7 +73,7 @@
                 <constraint firstItem="CZT-cC-Fao" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.09" id="UZg-0L-Jf4"/>
                 <constraint firstItem="JvN-fO-zal" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="V9R-Cp-fjR"/>
                 <constraint firstItem="Oq0-Bu-uyp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eTN-sh-gMR"/>
-                <constraint firstItem="Oq0-Bu-uyp" firstAttribute="top" secondItem="CZT-cC-Fao" secondAttribute="bottom" id="f70-Rw-MG2"/>
+                <constraint firstItem="Oq0-Bu-uyp" firstAttribute="top" secondItem="CZT-cC-Fao" secondAttribute="bottom" constant="10" id="f70-Rw-MG2"/>
                 <constraint firstItem="JvN-fO-zal" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="rBS-OM-xTd"/>
                 <constraint firstItem="CZT-cC-Fao" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="v7W-ME-rRV"/>
                 <constraint firstAttribute="bottom" secondItem="Oq0-Bu-uyp" secondAttribute="bottom" id="zqm-MV-xL7"/>

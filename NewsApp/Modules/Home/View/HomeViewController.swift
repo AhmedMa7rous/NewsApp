@@ -26,8 +26,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchData()
         updateUi()
+        viewModel.fetchData()
         bindTableView()
     }
 
@@ -90,7 +90,7 @@ class HomeViewController: UIViewController {
             self.newsTableView.isHidden = true
             self.viewMessage.isHidden = false
             self.navigationController?.navigationBar.isHidden = true
-            self.lblMessage.text = "Oops! something wrong try again later.!!"
+            self.lblMessage.text = "Oops! something wrong try again later!!"
             self.imgMeessage.image = #imageLiteral(resourceName: "Error")
         }.disposed(by: viewModel.disposeBag)
     }
