@@ -13,6 +13,7 @@
 		4C19EC4E2A0BEAE60003F29A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4C19EC4D2A0BEAE60003F29A /* RxSwift */; };
 		4C19EC512A0BEB060003F29A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4C19EC502A0BEB060003F29A /* SDWebImage */; };
 		4C19EC542A0BEDBA0003F29A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4C19EC532A0BEDBA0003F29A /* Alamofire */; };
+		4C26DEF92A0D463800718872 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 4C26DEF82A0D463800718872 /* Cosmos */; };
 		4C41E16A2A0A4DD500A9F930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41E1692A0A4DD500A9F930 /* AppDelegate.swift */; };
 		4C41E16C2A0A4DD500A9F930 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41E16B2A0A4DD500A9F930 /* SceneDelegate.swift */; };
 		4C41E16E2A0A4DD500A9F930 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41E16D2A0A4DD500A9F930 /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 			files = (
 				4C19EC4A2A0BEAE60003F29A /* RxCocoa in Frameworks */,
 				4C19EC472A0BEA8C0003F29A /* Moya in Frameworks */,
+				4C26DEF92A0D463800718872 /* Cosmos in Frameworks */,
 				4C19EC4E2A0BEAE60003F29A /* RxSwift in Frameworks */,
 				4C19EC542A0BEDBA0003F29A /* Alamofire in Frameworks */,
 				4C19EC4C2A0BEAE60003F29A /* RxRelay in Frameworks */,
@@ -245,6 +247,7 @@
 				4C19EC4D2A0BEAE60003F29A /* RxSwift */,
 				4C19EC502A0BEB060003F29A /* SDWebImage */,
 				4C19EC532A0BEDBA0003F29A /* Alamofire */,
+				4C26DEF82A0D463800718872 /* Cosmos */,
 			);
 			productName = NewsApp;
 			productReference = 4C41E1662A0A4DD500A9F930 /* NewsApp.app */;
@@ -279,6 +282,7 @@
 				4C19EC482A0BEAE60003F29A /* XCRemoteSwiftPackageReference "RxSwift" */,
 				4C19EC4F2A0BEB060003F29A /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				4C19EC522A0BEDBA0003F29A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4C26DEF72A0D463800718872 /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
 			productRefGroup = 4C41E1672A0A4DD500A9F930 /* Products */;
 			projectDirPath = "";
@@ -568,6 +572,14 @@
 				version = 5.6.4;
 			};
 		};
+		4C26DEF72A0D463800718872 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -600,6 +612,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4C19EC522A0BEDBA0003F29A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		4C26DEF82A0D463800718872 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C26DEF72A0D463800718872 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -106,7 +106,7 @@ extension HomeViewController: UITableViewDelegate {
 
          } .disposed(by: viewModel.disposeBag)
          
-         newsTableView.rx.modelSelected(Article.self).subscribe { [weak self] player in
+         newsTableView.rx.modelSelected(Article.self).subscribe { [weak self] item in
              guard let self = self else { return }
              let vc = DetailsViewController()
              self.navigationController?.pushViewController(vc, animated: true)
