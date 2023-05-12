@@ -14,7 +14,6 @@ class HomeViewModel {
     //MARK: Properties
     private let provider = MoyaProvider<NetworkManager>()
     private(set) var news = BehaviorSubject(value: [Article]())
-    private(set) var items = [Article]()
     var disposeBag: DisposeBag = DisposeBag()
     var onSuccess: PublishSubject<Void> = PublishSubject<Void>()
     var onError: PublishSubject<String> = PublishSubject<String>()

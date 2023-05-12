@@ -31,6 +31,13 @@ class HomeViewController: UIViewController {
         bindTableView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let index = self.newsTableView.indexPathForSelectedRow {
+            self.newsTableView.deselectRow(at: index, animated: true)
+        }
+        
+    }
 
 /*===========================================*/
     //MARK: - Action Connections
@@ -108,8 +115,13 @@ extension HomeViewController: UITableViewDelegate {
          
          newsTableView.rx.modelSelected(Article.self).subscribe { [weak self] item in
              guard let self = self else { return }
-             let vc = DetailsViewController()
+             guard let article = item.element else { return }
+             let vc = DetailsViewController(article: article)
              self.navigationController?.pushViewController(vc, animated: true)
          }.disposed(by: viewModel.disposeBag)
+         
+//         newsTableView.rx.modelDeselected(Article.self).subscribe { item in
+//             print("deselected: \(item)")
+//         }.disposed(by: viewModel.disposeBag)
      }
 }
