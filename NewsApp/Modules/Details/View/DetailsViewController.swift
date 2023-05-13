@@ -30,7 +30,7 @@ class DetailsViewController: UIViewController {
 /*=====================================================*/
     //MARK: - LifeCycle
     
-    init(article: Article) {
+    init(article: ArticlesEntity) {
         self.viewModel = DetailsViewModel(with: article)
         super.init(nibName: nil, bundle: nil)
     }
@@ -49,7 +49,7 @@ class DetailsViewController: UIViewController {
 /*=====================================================*/
     //MARK: - Action Connections
     @IBAction func sourceButtonTapped(_ sender: UIButton) {
-        guard let url = URL(string: viewModel.article.url) else { return }
+        guard let url = URL(string: viewModel.article.url!) else { return }
         UIApplication.shared.open(url)
     }
     
@@ -89,8 +89,7 @@ class DetailsViewController: UIViewController {
         
         articleDateLabel.text = viewModel.article.publishedAt
         articleAuthorLabel.text = "By: " + (viewModel.article.author ?? "Unknown")
-        articleDetailsLabel.text = viewModel.article.description + "\n\n\n" + viewModel.article.content
-        
+        articleDetailsLabel.text = viewModel.article.descrip! + "\n\n\n" + viewModel.article.content!
     }
     
     ///This function responsible for making alerts according to user input in text field

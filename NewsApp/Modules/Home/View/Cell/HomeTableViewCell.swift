@@ -32,7 +32,7 @@ class HomeTableViewCell: UITableViewCell {
 /*=========================================*/
     //MARK: - Services Functions
     ///This function responsible for set the data to cell components
-    func configure(article: Article) {
+    func configure(article: ArticlesEntity) {
         dateLabel.text = article.publishedAt
         articleTitleLabel.text = article.title
         let url = article.urlToImage ?? "apple"

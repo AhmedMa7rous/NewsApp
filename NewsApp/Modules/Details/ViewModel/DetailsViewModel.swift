@@ -8,9 +8,9 @@
 import Foundation
 
 class DetailsViewModel {
-    private(set) var article: Article
+    private(set) var article: ArticlesEntity
     
-    init(with article: Article) {
+    init(with article: ArticlesEntity) {
         self.article = article
     }
 }

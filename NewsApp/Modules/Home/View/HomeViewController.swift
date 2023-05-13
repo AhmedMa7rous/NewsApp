@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUi()
-        viewModel.fetchData()
+        viewModel.checkConnection()
         bindTableView()
     }
 
@@ -113,7 +113,7 @@ extension HomeViewController: UITableViewDelegate {
 
          } .disposed(by: viewModel.disposeBag)
          
-         newsTableView.rx.modelSelected(Article.self).subscribe { [weak self] item in
+         newsTableView.rx.modelSelected(ArticlesEntity.self).subscribe { [weak self] item in
              guard let self = self else { return }
              guard let article = item.element else { return }
              let vc = DetailsViewController(article: article)
